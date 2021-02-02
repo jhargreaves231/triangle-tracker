@@ -1,9 +1,20 @@
-function equilateral(var1, var2, var3) {
-  if (var1 === var2 & var2 === var3) {
+/*function equilateral(var1, var2, var3) {
+  if (var1 === var2 === var3) {
     return "Equilateral"
   }
   else {
     return "Not Equilateral"
+  }
+}*/
+
+function equilateral(var1, var2, var3) {
+  if (var1 === var2 === var3) {
+    return "Equilateral"
+  } else if (var1 === var2 || var2 === var3 || var1 === var3) {
+    return "Isosceles"
+  }
+  else {
+    return "Scalene"
   }
 }
 
@@ -19,7 +30,7 @@ $(document).ready(function(){
     
     let result = equilateral(number1, number2, number3)
 
-    $("#output").text(result);
+       $("#output").text(result);
   });
 });
 
