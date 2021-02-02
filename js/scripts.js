@@ -1,4 +1,11 @@
-
+function equilateral(var1, var2, var3) {
+  if (var1 === var2 & var2 === var3) {
+    return "Equilateral"
+  }
+  else {
+    return "Not Equilateral"
+  }
+}
 
 
 // Everything below this line is user interface logic:
@@ -10,7 +17,13 @@ $(document).ready(function(){
     const number2 = parseInt($("#input2").val());
     const number3 = parseInt($("#input3").val());
     
-    let result;
+    let result = equilateral(number1, number2, number3)
+
+    $("#output").text(result);
+  });
+});
+
+    /*let result;
     if (operator === "add"){
       result = add(number1, number2);
     } else if (operator === "subtract"){
@@ -19,11 +32,9 @@ $(document).ready(function(){
       result = multiplication(number1, number2);
     } else if (operator === "divide"){
       result = divide(number1, number2)
-    }
+    }*/
     
-    $("#output").text(result);
-  });
-});
+ 
 
 /*const add = function(number1, number2) {
   return number1 + number2;
